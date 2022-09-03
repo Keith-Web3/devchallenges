@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --spacer: 1em;
+  --dark-blue: #333333;
+
+}
+header {
+  font-family: "Inconsolata", Nunito, sans-serif;
+  font-weight: 700;
+  padding: var(--spacer) var(--spacer) 0;
+  font-size: 1.3rem;
+  color: var(--dark-blue);
+}
+main{
+  padding: var(--spacer);
+}
+img {
+  display: block;
+  width: 100%;
+  margin-block: calc(var(--spacer) * 1.5);
+}
+h1,
+p,
+button {
+  font-family: "Space mono", Nunito, sans-serif;
+}
+h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: calc(var(--spacer) * 0.25);
+}
+p {
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1.1rem;
+  margin-block: calc(var(--spacer) * 0.25) calc(var(--spacer) * 2);
+}
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: var(--dark-blue);
+  padding: var(--spacer) calc(var(--spacer) * 0.95);
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
