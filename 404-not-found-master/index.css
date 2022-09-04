@@ -6,16 +6,15 @@
 :root {
   --spacer: 1em;
   --dark-blue: #333333;
-
 }
 header {
-  font-family: "Inconsolata", Nunito, sans-serif;
+  font-family: 'Inconsolata', Nunito, sans-serif;
   font-weight: 700;
   padding: var(--spacer) var(--spacer) 0;
   font-size: 1.3rem;
   color: var(--dark-blue);
 }
-main{
+main {
   padding: var(--spacer);
 }
 img {
@@ -26,7 +25,7 @@ img {
 h1,
 p,
 button {
-  font-family: "Space mono", Nunito, sans-serif;
+  font-family: 'Space mono', Nunito, sans-serif;
 }
 h1 {
   font-weight: 700;
@@ -45,7 +44,7 @@ button {
   outline: none;
   background-color: var(--dark-blue);
   padding: var(--spacer) calc(var(--spacer) * 0.95);
-  color: #FFF;
+  color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
