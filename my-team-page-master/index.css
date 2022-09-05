@@ -28,7 +28,7 @@ h2 {
 main {
   display: grid;
   grid-template: repeat(3, auto) / repeat(2, auto);
-  column-gap: calc(var(--spacer) * 0.5);
+  gap: calc(var(--spacer) * 2) var(--spacer);
 }
 .person {
   display: grid;
@@ -39,7 +39,7 @@ main {
   align-items: start;
 }
 .person:nth-of-type(even) {
-  translate: 0 20px;
+  translate: 0 20%;
 }
 img {
   display: block;
