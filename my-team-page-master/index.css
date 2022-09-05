@@ -13,10 +13,12 @@ body {
 h1,
 .role {
   font-family: 'PT Serif', Nunito, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
 }
 h1 {
   font-size: 1.5rem;
   margin-block: calc(var(--spacer) * 0.85) calc(var(--spacer) * 0.5);
+  font-weight: 700;
 }
 h2 {
   font-size: 1.05rem;
@@ -27,7 +29,7 @@ h2 {
 }
 main {
   display: grid;
-  grid-template: repeat(3, auto) / repeat(2, auto);
+  grid-template: repeat(3, auto) / repeat(2, 1fr);
   gap: calc(var(--spacer) * 2) var(--spacer);
 }
 .person {
@@ -39,7 +41,7 @@ main {
   align-items: start;
 }
 .person:nth-of-type(even) {
-  translate: 0 20%;
+  transform: translate(0, 20%);
 }
 img {
   display: block;
@@ -56,4 +58,30 @@ img {
   grid-area: name;
   font-size: 0.95rem;
   font-weight: 600;
+}
+@media (min-width: 550px) {
+  main {
+    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    gap: calc(var(--spacer) * 2) var(--spacer);
+  }
+  .person:nth-of-type(even) {
+    transform: translate(0, 0);
+  }
+  .person:nth-child(2),
+  .person:nth-child(5) {
+    transform: translate(0, 20%);
+  }
+}
+@media (min-width: 700px) {
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  .sub-header {
+    width: 60%;
+  }
 }
