@@ -61,11 +61,11 @@ nav li::after {
   inset: auto 10% 4px;
   background-color: #fff;
   height: 3px;
-  scale: 0 0;
-  transition: scale 250ms linear;
+  transform: scale(0, 0);
+  transition: transform 250ms linear;
 }
 nav li.active::after {
-  scale: 1 1;
+  transform: scale(1, 1);
 }
 #nav-toggle {
   width: 23px;
@@ -134,7 +134,7 @@ nav li.active::after {
   position: absolute;
   inset: auto 5% 0 10%;
   background-color: #181719;
-  translate: 0 60%;
+  transform: translateY(60%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   padding: 0.6em;
 }
