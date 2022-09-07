@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Interior Consultant Master</title>
+  </head>
+  <body>
+    <header>
+      <p class="logo">THIS INTERIOR</p>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Collection</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div id="nav-toggle">
+        <div class="nav-line nav-line-1"></div>
+        <div class="nav-line nav-line-2"></div>
+        <div class="nav-line nav-line-3"></div>
+      </div>
+    </header>
+    <main>
+      <section class="section-one">
+        <h1>Modern interior</h1>
+        <p>
+          A full-Service residential & commercial interior design and staging
+          company offering professional organizing & eco-services.
+        </p>
+        <div class="read-more-btn">
+          <p>Read more</p>
+          <img src="arrow.svg" alt="arrow-icon" />
+        </div>
+      </section>
+      <section class="section-two">
+        <img src="photo1.png" class="hero-img" alt="hero image" />
+        <div class="designer-profile">
+          <h2>Designed in 2020 by Aliza Webber</h2>
+          <img src="photo2.png" alt="designer profile picture" />
+          <p class="designer-name">Aliza Webber</p>
+          <p class="designer-job">Interior designer</p>
+        </div>
+      </section>
+    </main>
+    <script>
+      const navToggle = document.getElementById('nav-toggle')
+      const navItems = document.querySelectorAll('li')
+
+      navToggle.addEventListener('click', function () {
+        this.classList.toggle('nav-toggle-active')
+        document.querySelector('nav').style.inset =
+          this.className === 'nav-toggle-active' ? '0' : '-120% 0 auto'
+      })
+      navItems.forEach(item => {
+        item.addEventListener('click', function () {
+          navItems.forEach(item => item.classList.remove('active'))
+          item.classList.toggle('active')
+        })
+      })
+    </script>
+  </body>
+</html>
