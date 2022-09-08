@@ -14,6 +14,8 @@ body {
   color: #fff;
   padding: 1em 1em 7em;
   position: relative;
+  width: min(100%, 400px);
+  margin-inline: auto;
 }
 h1,
 h2 {
@@ -54,6 +56,8 @@ nav ul {
 nav li.active {
   font-weight: 700;
   position: relative;
+  width: max-content;
+  margin-inline: auto;
 }
 nav li::after {
   content: '';
@@ -136,7 +140,7 @@ nav li.active::after {
   background-color: #181719;
   transform: translateY(60%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 0.6em;
+  padding: 1em;
 }
 .designer-profile img {
   grid-area: img;
@@ -156,4 +160,45 @@ nav li.active::after {
   grid-area: text;
   font-size: 1.25rem;
   margin-top: 0.5em;
+}
+@media (min-width: 500px) {
+  body {
+    width: min(100%, 1100px);
+    padding-inline: 2em;
+    padding-top: 1.5em;
+  }
+  nav {
+    position: unset;
+    padding: 0;
+  }
+  nav ul {
+    display: flex;
+    font-size: 0.95rem;
+    gap: 5vw;
+  }
+  nav li {
+    cursor: pointer;
+  }
+  .section-one {
+    max-width: 355px;
+  }
+  .section-two {
+    max-width: 565px;
+  }
+  #nav-toggle {
+    display: none;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+  }
+  .designer-profile {
+    max-width: 320px;
+    margin-left: auto;
+  }
+  .designer-profile h2 {
+    max-width: 270px;
+  }
 }
