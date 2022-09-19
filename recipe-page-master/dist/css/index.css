@@ -1,0 +1,211 @@
+/* Box sizing rules, Remove default margin */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Montserrat", Nunito, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: #333333;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Nunito, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  color: #000000;
+}
+
+h3 {
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  padding: 2em 1em 1em;
+}
+
+.section-one {
+  display: grid;
+  display: grid;
+  grid-template: repeat(2, auto)/repeat(2, auto);
+  grid-template-areas: "header header" "img text";
+  gap: 0.95em;
+}
+.section-one h1 {
+  grid-area: header;
+}
+.section-one img {
+  grid-area: img;
+}
+.section-one p {
+  grid-area: text;
+  margin-top: -0.28em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-img {
+  width: 100%;
+  margin-block: 1.5em;
+}
+
+.dining-info {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  grid-template-areas: "info1 info1 info1" "info2 info3 info4";
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.dining-info__container {
+  display: grid;
+  grid-template: repeat(2, max-content)/repeat(2, max-content);
+  grid-template-areas: "img title" "img info";
+  align-items: center;
+  column-gap: 0.3em;
+}
+.dining-info__container img {
+  grid-area: img;
+  height: 60%;
+}
+.dining-info__container .title {
+  grid-area: title;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 74%);
+  font-size: 0.9rem;
+}
+.dining-info__container .info {
+  grid-area: info;
+  font-weight: 500;
+  color: #333333;
+  font-size: 0.9rem;
+}
+.dining-info__container:nth-child(1) {
+  grid-area: info1;
+}
+.dining-info__container:nth-child(2) {
+  grid-area: info2;
+}
+.dining-info__container:nth-child(3) {
+  grid-area: info3;
+}
+.dining-info__container:nth-child(4) {
+  grid-area: info4;
+}
+
+.ingredients h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.ingredients h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+.ingredients .meal-one {
+  margin-bottom: 2em;
+}
+.ingredients .ingredient {
+  display: grid;
+  grid-template-columns: 19px 1fr;
+  align-items: baseline;
+  gap: 0.5em;
+  margin-bottom: 0.45em;
+}
+.ingredients input {
+  width: 19px;
+  height: 19px;
+  border-color: #828282;
+}
+.ingredients label {
+  font-weight: 400;
+}
+.ingredients strong {
+  font-weight: 700;
+}
+.ingredients span {
+  font-weight: 500;
+}
+
+.instructions {
+  margin-top: 1em;
+}
+.instructions h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+.instructions .instruction {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 1em;
+}
+.instructions .number {
+  font-weight: 700;
+  font-family: "Playfair Display", Nunito, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  padding: 0.2em 0.6em 0.3em;
+  background-color: #f2994a;
+  color: #fff;
+  border-radius: 6px;
+}
+
+/*# sourceMappingURL=index.css.map */

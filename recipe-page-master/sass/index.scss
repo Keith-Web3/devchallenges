@@ -1,0 +1,146 @@
+@use 'resets';
+
+$spacer: 1em;
+@mixin grid($templateRows, $templateAreas, $templateCols: $templateRows) {
+  display: grid;
+  grid-template: $templateRows / $templateCols;
+  grid-template-areas: $templateAreas;
+}
+
+body {
+  font-family: 'Montserrat', Nunito, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: #333333;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', Nunito, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+h1 {
+  color: #000000;
+}
+h3 {
+  font-weight: 400;
+  font-style: italic;
+}
+body {
+  padding: $spacer * 2 $spacer $spacer;
+}
+.section-one {
+  display: grid;
+  @include grid(repeat(2, auto), 'header header' 'img text');
+  gap: $spacer * 0.95;
+
+  h1 {
+    grid-area: header;
+  }
+  img {
+    grid-area: img;
+  }
+  p {
+    grid-area: text;
+    margin-top: -0.28 * $spacer;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+.hero-img {
+  width: 100%;
+  margin-block: $spacer * 1.5;
+}
+.dining-info {
+  @include grid(
+    repeat(2, 1fr),
+    'info1 info1 info1' 'info2 info3 info4',
+    repeat(3, 1fr)
+  );
+  gap: $spacer;
+  margin-bottom: $spacer;
+
+  &__container {
+    @include grid(repeat(2, max-content), 'img title' 'img info');
+    align-items: center;
+    column-gap: $spacer * 0.3;
+
+    img {
+      grid-area: img;
+      height: 60%;
+    }
+    .title {
+      grid-area: title;
+      font-weight: 700;
+      color: hsl(0, 0%, 74%);
+      font-size: 0.9rem;
+    }
+    .info {
+      grid-area: info;
+      font-weight: 500;
+      color: #333333;
+      font-size: 0.9rem;
+    }
+    @for $i from 1 to 5 {
+      &:nth-child(#{$i}) {
+        grid-area: info#{$i};
+      }
+    }
+  }
+}
+.ingredients {
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: $spacer;
+  }
+  .meal-one {
+    margin-bottom: $spacer * 2;
+  }
+  .ingredient {
+    display: grid;
+    grid-template-columns: 19px 1fr;
+    align-items: baseline;
+    gap: $spacer * 0.5;
+    margin-bottom: $spacer * 0.45;
+  }
+  input {
+    width: 19px;
+    height: 19px;
+    border-color: #828282;
+  }
+  label {
+    font-weight: 400;
+  }
+  strong {
+    font-weight: 700;
+  }
+  span {
+    font-weight: 500;
+  }
+}
+.instructions {
+  margin-top: $spacer;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: $spacer;
+  }
+  .instruction {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: $spacer;
+  }
+  .number {
+    font-weight: 700;
+    font-family: 'Playfair Display', Nunito, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    padding: 0.2em 0.6em 0.3em;
+    background-color: #f2994a;
+    color: #fff;
+    border-radius: 6px;
+  }
+}
