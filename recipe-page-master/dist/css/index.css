@@ -86,7 +86,6 @@ body {
 
 .section-one {
   display: grid;
-  display: grid;
   grid-template: repeat(2, auto)/repeat(2, auto);
   grid-template-areas: "header header" "img text";
   gap: 0.95em;
@@ -111,8 +110,8 @@ body {
 
 .dining-info {
   display: grid;
-  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-  grid-template-areas: "info1 info1 info1" "info2 info3 info4";
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-rows: auto;
   gap: 1em;
   margin-bottom: 1em;
 }
@@ -139,17 +138,8 @@ body {
   color: #333333;
   font-size: 0.9rem;
 }
-.dining-info__container:nth-child(1) {
-  grid-area: info1;
-}
-.dining-info__container:nth-child(2) {
-  grid-area: info2;
-}
-.dining-info__container:nth-child(3) {
-  grid-area: info3;
-}
-.dining-info__container:nth-child(4) {
-  grid-area: info4;
+.dining-info__container:first-child {
+  grid-column: 1/-1;
 }
 
 .ingredients h2 {
@@ -197,6 +187,7 @@ body {
   grid-template-columns: auto 1fr;
   align-items: start;
   column-gap: 1em;
+  margin-bottom: 1em;
 }
 .instructions .number {
   font-weight: 700;
