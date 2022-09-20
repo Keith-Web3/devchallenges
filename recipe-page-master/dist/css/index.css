@@ -86,7 +86,7 @@ body {
 
 .section-one {
   display: grid;
-  grid-template: repeat(2, auto)/repeat(2, auto);
+  grid-template: repeat(2, auto)/13px auto;
   grid-template-areas: "header header" "img text";
   gap: 0.95em;
 }
@@ -101,6 +101,7 @@ body {
   margin-top: -0.28em;
   font-style: italic;
   font-weight: 400;
+  max-width: 684px;
 }
 
 .hero-img {
@@ -111,9 +112,13 @@ body {
 .dining-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-auto-rows: auto;
   gap: 1em;
   margin-bottom: 1em;
+}
+@media (min-width: 559px) {
+  .dining-info {
+    grid-template: repeat(2, auto)/repeat(3, 1fr);
+  }
 }
 .dining-info__container {
   display: grid;
@@ -164,6 +169,7 @@ body {
   width: 19px;
   height: 19px;
   border-color: #828282;
+  cursor: pointer;
 }
 .ingredients label {
   font-weight: 400;
@@ -197,6 +203,43 @@ body {
   background-color: #f2994a;
   color: #fff;
   border-radius: 6px;
+}
+
+@media (min-width: 570px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  body {
+    padding: 1.5em;
+    max-width: 950px;
+    margin-inline: auto;
+    display: grid;
+    grid-template: repeat(4, auto)/repeat(2, auto);
+    grid-template-areas: "sect1 sect1" "img img" "ingredients dining" "instructions .";
+    align-items: start;
+    gap: 1em 3em;
+  }
+  body .section-one {
+    grid-area: sect1;
+  }
+  body .hero-img {
+    grid-area: img;
+  }
+  body .ingredients {
+    grid-area: ingredients;
+  }
+  body .dining-info {
+    grid-area: dining;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    padding: 2em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  body .instructions {
+    grid-area: instructions;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
