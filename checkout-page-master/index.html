@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="devchallenges.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Checkout Page</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <section class="checkout">
+      <div class="checkout__item">
+        <img src="photo1.png" alt="Vintage Backbag" />
+        <div class="checkout__item__header">
+          <h2>Vintage Backbag</h2>
+          <p><span class="price">$54.99</span> $94.99</p>
+        </div>
+        <div class="checkout__item__count">
+          <img src="minus-solid.svg" alt="remove" />
+          <p>1</p>
+          <img src="plus-solid.svg" alt="add" />
+        </div>
+      </div>
+      <div class="checkout__item">
+        <img src="photo2.png" alt="Levi Shoes" />
+        <div class="checkout__item__header">
+          <h2>Levi Shoes</h2>
+          <p><span class="price">$74.99</span> $124.99</p>
+        </div>
+        <div class="checkout__item__count">
+          <img src="minus-solid.svg" alt="remove" />
+          <p>1</p>
+          <img src="plus-solid.svg" alt="add" />
+        </div>
+      </div>
+      <hr />
+      <p class="checkout__footer"><span>Shipping</span><span>$19</span></p>
+      <hr />
+      <p class="checkout__footer"><span>Total</span><span>$148.98</span></p>
+    </section>
+    <section class="contact">
+      <div class="contact__info">
+        <h2>Contact information</h2>
+        <label for="email">
+          Email
+          <input type="text" placeholder="Enter your email..." />
+          <img src="envelope-solid.svg" alt="Email" />
+        </label>
+        <label for="phone">
+          Phone
+          <input type="text" placeholder="Enter your phone..." />
+          <img src="phone-solid.svg" alt="Phone" />
+        </label>
+      </div>
+      <div class="contact__info contact__info--two">
+        <h2>Shipping address</h2>
+        <label for="fullname">
+          Full name
+          <input type="text" placeholder="Enter your fullname..." />
+          <img
+            src="account_circle_FILL0_wght400_GRAD0_opsz48.svg"
+            alt="Fullname"
+          />
+        </label>
+        <label for="address">
+          Address
+          <input type="text" placeholder="Your address..." />
+          <img src="house-solid.svg" alt="address" />
+        </label>
+        <label for="city">
+          City
+          <input type="text" placeholder="Your city..." />
+          <img src="city-solid.svg" alt="city" />
+        </label>
+        <label for="country">
+          Country
+          <input type="text" placeholder="Your country..." />
+          <img src="earth-americas-solid.svg" alt="country" />
+        </label>
+        <label for="Postal-Code">
+          Postal code
+          <input type="text" placeholder="Your postal code..." />
+          <img
+            src="markunread_mailbox_FILL0_wght400_GRAD0_opsz48.svg"
+            alt="Postal code"
+          />
+        </label>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">Save this information for next time</label>
+        <button type="button">Continue</button>
+      </div>
+    </section>
+  </body>
+</html>
