@@ -27,6 +27,9 @@ h1 {
 
     &:nth-child(2) {
       margin-block: $spacer * 2.5 $spacer * 5;
+      @media (max-width: 430px) {
+        margin-bottom: $spacer * 3;
+      }
     }
 
     & > img {
@@ -93,5 +96,62 @@ h1 {
     justify-content: space-between;
     align-items: center;
     color: #333333;
+  }
+}
+
+.contact {
+  margin-top: $spacer * 2;
+
+  &__info--two {
+    margin-top: $spacer * 2;
+  }
+  h2 {
+    color: #333333;
+    font-size: 1.3rem;
+    margin-bottom: $spacer * 0.5;
+  }
+  label {
+    font-size: 0.95rem;
+  }
+  .input-container {
+    position: relative;
+    margin-block: $spacer * 0.25 $spacer;
+
+    img {
+      position: absolute;
+      inset: 50% auto auto $spacer;
+      transform: translateY(-50%);
+      width: min(7%, 21px);
+    }
+  }
+  input:not([type='checkbox']) {
+    display: block;
+    width: 100%;
+    appearance: none;
+    border: 1px solid #828282;
+    border-radius: 12px;
+    padding: $spacer * 0.5;
+    padding-left: $spacer * 3;
+  }
+  input[type='checkbox'] {
+    width: 16px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    accent-color: #333333;
+    cursor: pointer;
+    margin-right: $spacer * 0.5;
+  }
+  button {
+    display: block;
+    appearance: none;
+    background-color: #f2994a;
+    color: #fff;
+    border: none;
+    margin-left: auto;
+    font-size: 1.2rem;
+    padding: $spacer * 0.7 $spacer * 1.5;
+    border-radius: 12px;
+    cursor: pointer;
   }
 }
