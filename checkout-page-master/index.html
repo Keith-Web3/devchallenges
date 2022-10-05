@@ -90,22 +90,33 @@
           <input type="text" id="city" placeholder="Your city..." />
           <img src="city-solid.svg" alt="city" />
         </div>
-        <label for="country"> Country </label>
-        <div class="input-container">
-          <input type="text" id="country" placeholder="Your country..." />
-          <img src="earth-americas-solid.svg" alt="country" />
-        </div>
-        <label for="postal-Code"> Postal code </label>
-        <div class="input-container">
-          <input
-            type="text"
-            id="postal-code"
-            placeholder="Your postal code..."
-          />
-          <img
-            src="markunread_mailbox_FILL0_wght400_GRAD0_opsz48.svg"
-            alt="Postal code"
-          />
+        <div class="double-input">
+          <div class="country">
+            <label for="country"> Country </label>
+            <div class="input-container">
+              <input type="text" id="country" placeholder="Your country..." />
+              <img src="earth-americas-solid.svg" alt="country" />
+              <img
+                src="chevron-down-solid.svg"
+                alt="drop-down"
+                class="dropdown-arrow"
+              />
+            </div>
+          </div>
+          <div class="postal">
+            <label for="postal-Code"> Postal code </label>
+            <div class="input-container">
+              <input
+                type="text"
+                id="postal-code"
+                placeholder="Your postal code..."
+              />
+              <img
+                src="markunread_mailbox_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="Postal code"
+              />
+            </div>
+          </div>
         </div>
         <input type="checkbox" id="checkbox" />
         <label for="checkbox">Save this information for next time</label>

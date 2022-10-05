@@ -222,6 +222,14 @@ h1 {
   transform: translateY(-50%);
   width: min(7%, 21px);
 }
+.contact .input-container img.dropdown-arrow {
+  inset: 50% 1em auto auto;
+  padding: 0.3em;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  object-fit: contain;
+  width: min(9%, 25px);
+}
 .contact input:not([type=checkbox]) {
   display: block;
   width: 100%;
@@ -239,6 +247,19 @@ h1 {
   accent-color: #333333;
   cursor: pointer;
   margin-right: 0.5em;
+}
+.contact .double-input {
+  display: flex;
+  gap: 1em;
+}
+.contact .double-input #country {
+  padding-right: 3em;
+}
+.contact .double-input img {
+  width: 20px;
+}
+.contact .double-input img.dropdown-arrow {
+  width: 25px;
 }
 .contact button {
   display: block;

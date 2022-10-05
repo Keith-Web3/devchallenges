@@ -145,6 +145,15 @@ h1 {
       inset: 50% auto auto $spacer;
       transform: translateY(-50%);
       width: min(7%, 21px);
+
+      &.dropdown-arrow {
+        inset: 50% $spacer auto auto;
+        padding: $spacer * 0.3;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        object-fit: contain;
+        width: min(9%, 25px);
+      }
     }
   }
   input:not([type='checkbox']) {
@@ -164,6 +173,20 @@ h1 {
     accent-color: #333333;
     cursor: pointer;
     margin-right: $spacer * 0.5;
+  }
+  .double-input {
+    display: flex;
+    gap: $spacer;
+
+    #country {
+      padding-right: $spacer * 3;
+    }
+    img {
+      width: 20px;
+      &.dropdown-arrow {
+        width: 25px;
+      }
+    }
   }
   button {
     display: block;
