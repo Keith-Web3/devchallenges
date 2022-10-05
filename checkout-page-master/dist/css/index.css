@@ -63,17 +63,31 @@ body {
   font-weight: 600;
   color: #4e5150;
   padding: 1em;
+  max-width: 480px;
+  margin-inline: auto;
+}
+@media (min-width: 850px) {
+  body {
+    max-width: 900px;
+    display: grid;
+    grid-template: repeat(2, auto)/1fr 45%;
+    grid-template-areas: "header header" "contact checkout";
+    column-gap: 4em;
+    align-items: start;
+  }
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 0.7em;
+  grid-area: header;
 }
 
 .checkout {
   background-color: hsl(0deg, 0%, 95%);
   border-radius: 12px;
   padding: 1.5em;
+  grid-area: checkout;
 }
 .checkout__item {
   display: grid;
@@ -112,6 +126,11 @@ h1 {
     margin-bottom: 0;
   }
 }
+@media (min-width: 850px) {
+  .checkout__item__header h2 {
+    margin-bottom: 0.2em;
+  }
+}
 .checkout__item__header .price {
   color: #f2994a;
   margin-right: 1em;
@@ -148,6 +167,11 @@ h1 {
     padding: 0.5em;
   }
 }
+@media (min-width: 850px) {
+  .checkout__item__count {
+    padding: 0.8em;
+  }
+}
 .checkout__item__count img {
   width: min(24%, 30px);
   padding: 0.4em;
@@ -170,6 +194,12 @@ h1 {
 
 .contact {
   margin-top: 2em;
+  grid-area: contact;
+}
+@media (min-width: 850px) {
+  .contact {
+    margin-top: 0;
+  }
 }
 .contact__info--two {
   margin-top: 2em;
@@ -221,6 +251,7 @@ h1 {
   padding: 0.7em 1.5em;
   border-radius: 12px;
   cursor: pointer;
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=index.css.map */
